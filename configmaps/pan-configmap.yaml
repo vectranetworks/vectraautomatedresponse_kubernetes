@@ -1,0 +1,17 @@
+apiVersion: v1
+data:
+  pan_config.py: |
+    CHECK_SSL = False
+    # Palo Alto tag used to associate with internal dynamic group
+    INTERNAL_BLOCK_TAG = "Block_Host"
+    # Palo Alto tag used to associate with external dynamic group
+    EXTERNAL_BLOCK_TAG = "Block_Detection"
+    # Connection information
+    URLS = ["https://<IP or hostname>"]
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: pan

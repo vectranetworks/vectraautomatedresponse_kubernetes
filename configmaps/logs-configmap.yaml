@@ -1,0 +1,134 @@
+apiVersion: v1
+data:
+  var.log: |
+    2025-06-09 19:03:34|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1082> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:03:38|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1189> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:03:42|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2107> No actions taken.
+    2025-06-09 19:03:42|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2108> Run finished.
+    2025-06-09 19:10:13|DEBUG   :MainProcess:MainThread|VAR:vectra_automated_response:<module>:2340> Configuring Vectra API Client for https://203120373595.uw2.portal.vectra.ai
+    2025-06-09 19:10:45|DEBUG   :MainProcess:MainThread|VAR:vectra_automated_response:<module>:2359> Creating individual process for each Vectra API Client
+    2025-06-09 19:10:45|DEBUG   :Process-1:MainThread|Test Client:test_client:__init__:23> Initializing Test Client client with URL: https://example.com/api/data
+    2025-06-09 19:10:51|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1079> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:10:51|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1082> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:10:51|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1095> Found 0 blocked hosts that are now part of the no-block lists
+    2025-06-09 19:10:51|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1113> Found 0 hosts that need to be blocked
+    2025-06-09 19:10:51|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1136> Found 0 hosts that need to be unblocked
+    2025-06-09 19:10:54|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1186> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:10:54|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1189> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:10:54|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1202> Found 0 blocked accounts that are now part of the no-block lists
+    2025-06-09 19:10:54|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1220> Found 0 accounts that need to be blocked
+    2025-06-09 19:10:54|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1243> Found 0 accounts that need to be unblocked
+    2025-06-09 19:10:58|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1270> Found 0 already blocked detections on Vectra
+    2025-06-09 19:10:58|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1284> Found 0 blocked detections that are now part of the no-block lists
+    2025-06-09 19:10:58|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1302> Found 0 detections that need to be blocked
+    2025-06-09 19:10:58|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1325> Found 0 detections that need to be unblocked
+    2025-06-09 19:10:58|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_static_dst_ips_to_block_unblock:1384> Found 0 static IPs to block, 0 to unblock
+    2025-06-09 19:10:58|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2107> No actions taken.
+    2025-06-09 19:10:58|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2108> Run finished.
+    2025-06-09 19:16:03|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1079> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:16:03|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1082> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:16:03|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1095> Found 0 blocked hosts that are now part of the no-block lists
+    2025-06-09 19:16:03|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1113> Found 0 hosts that need to be blocked
+    2025-06-09 19:16:03|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1136> Found 0 hosts that need to be unblocked
+    2025-06-09 19:16:07|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1186> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:16:07|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1189> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:16:07|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1202> Found 0 blocked accounts that are now part of the no-block lists
+    2025-06-09 19:16:07|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1220> Found 0 accounts that need to be blocked
+    2025-06-09 19:16:07|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1243> Found 0 accounts that need to be unblocked
+    2025-06-09 19:16:10|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1270> Found 0 already blocked detections on Vectra
+    2025-06-09 19:16:10|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1284> Found 0 blocked detections that are now part of the no-block lists
+    2025-06-09 19:16:10|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1302> Found 0 detections that need to be blocked
+    2025-06-09 19:16:10|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1325> Found 0 detections that need to be unblocked
+    2025-06-09 19:16:10|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_static_dst_ips_to_block_unblock:1384> Found 0 static IPs to block, 0 to unblock
+    2025-06-09 19:16:10|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2107> No actions taken.
+    2025-06-09 19:16:10|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2108> Run finished.
+    2025-06-09 19:21:16|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1079> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:21:16|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1082> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:21:16|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1095> Found 0 blocked hosts that are now part of the no-block lists
+    2025-06-09 19:21:16|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1113> Found 0 hosts that need to be blocked
+    2025-06-09 19:21:16|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1136> Found 0 hosts that need to be unblocked
+    2025-06-09 19:21:19|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1186> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:21:19|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1189> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:21:19|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1202> Found 0 blocked accounts that are now part of the no-block lists
+    2025-06-09 19:21:19|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1220> Found 0 accounts that need to be blocked
+    2025-06-09 19:21:19|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1243> Found 0 accounts that need to be unblocked
+    2025-06-09 19:21:23|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1270> Found 0 already blocked detections on Vectra
+    2025-06-09 19:21:23|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1284> Found 0 blocked detections that are now part of the no-block lists
+    2025-06-09 19:21:23|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1302> Found 0 detections that need to be blocked
+    2025-06-09 19:21:23|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1325> Found 0 detections that need to be unblocked
+    2025-06-09 19:21:23|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_static_dst_ips_to_block_unblock:1384> Found 0 static IPs to block, 0 to unblock
+    2025-06-09 19:21:23|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2107> No actions taken.
+    2025-06-09 19:21:23|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2108> Run finished.
+    2025-06-09 19:26:28|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1079> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:26:28|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1082> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:26:28|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1095> Found 0 blocked hosts that are now part of the no-block lists
+    2025-06-09 19:26:28|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1113> Found 0 hosts that need to be blocked
+    2025-06-09 19:26:28|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1136> Found 0 hosts that need to be unblocked
+    2025-06-09 19:26:31|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1186> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:26:31|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1189> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:26:31|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1202> Found 0 blocked accounts that are now part of the no-block lists
+    2025-06-09 19:26:31|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1220> Found 0 accounts that need to be blocked
+    2025-06-09 19:26:31|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1243> Found 0 accounts that need to be unblocked
+    2025-06-09 19:26:35|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1270> Found 0 already blocked detections on Vectra
+    2025-06-09 19:26:35|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1284> Found 0 blocked detections that are now part of the no-block lists
+    2025-06-09 19:26:35|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1302> Found 0 detections that need to be blocked
+    2025-06-09 19:26:35|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1325> Found 0 detections that need to be unblocked
+    2025-06-09 19:26:35|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_static_dst_ips_to_block_unblock:1384> Found 0 static IPs to block, 0 to unblock
+    2025-06-09 19:26:35|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2107> No actions taken.
+    2025-06-09 19:26:35|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2108> Run finished.
+    2025-06-09 19:31:41|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1079> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:31:41|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1082> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:31:41|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1095> Found 0 blocked hosts that are now part of the no-block lists
+    2025-06-09 19:31:41|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1113> Found 0 hosts that need to be blocked
+    2025-06-09 19:31:41|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1136> Found 0 hosts that need to be unblocked
+    2025-06-09 19:31:45|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1186> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:31:45|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1189> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:31:45|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1202> Found 0 blocked accounts that are now part of the no-block lists
+    2025-06-09 19:31:45|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1220> Found 0 accounts that need to be blocked
+    2025-06-09 19:31:45|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1243> Found 0 accounts that need to be unblocked
+    2025-06-09 19:31:48|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1270> Found 0 already blocked detections on Vectra
+    2025-06-09 19:31:48|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1284> Found 0 blocked detections that are now part of the no-block lists
+    2025-06-09 19:31:48|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1302> Found 0 detections that need to be blocked
+    2025-06-09 19:31:48|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1325> Found 0 detections that need to be unblocked
+    2025-06-09 19:31:48|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_static_dst_ips_to_block_unblock:1384> Found 0 static IPs to block, 0 to unblock
+    2025-06-09 19:31:48|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2107> No actions taken.
+    2025-06-09 19:31:48|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2108> Run finished.
+    2025-06-09 19:36:54|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1079> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:36:54|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1082> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:36:54|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1095> Found 0 blocked hosts that are now part of the no-block lists
+    2025-06-09 19:36:54|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1113> Found 0 hosts that need to be blocked
+    2025-06-09 19:36:54|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1136> Found 0 hosts that need to be unblocked
+    2025-06-09 19:36:57|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1186> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:36:57|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1189> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:36:57|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1202> Found 0 blocked accounts that are now part of the no-block lists
+    2025-06-09 19:36:57|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1220> Found 0 accounts that need to be blocked
+    2025-06-09 19:36:57|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1243> Found 0 accounts that need to be unblocked
+    2025-06-09 19:37:01|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1270> Found 0 already blocked detections on Vectra
+    2025-06-09 19:37:01|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1284> Found 0 blocked detections that are now part of the no-block lists
+    2025-06-09 19:37:01|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1302> Found 0 detections that need to be blocked
+    2025-06-09 19:37:01|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1325> Found 0 detections that need to be unblocked
+    2025-06-09 19:37:01|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_static_dst_ips_to_block_unblock:1384> Found 0 static IPs to block, 0 to unblock
+    2025-06-09 19:37:01|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2107> No actions taken.
+    2025-06-09 19:37:01|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2108> Run finished.
+    2025-06-09 19:42:07|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1079> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:42:07|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1082> Found 1 already blocked hosts on Vectra
+    2025-06-09 19:42:07|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1095> Found 0 blocked hosts that are now part of the no-block lists
+    2025-06-09 19:42:07|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1113> Found 0 hosts that need to be blocked
+    2025-06-09 19:42:07|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_hosts_to_block_unblock:1136> Found 0 hosts that need to be unblocked
+    2025-06-09 19:42:10|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1186> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:42:10|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1189> Found 1 already blocked accounts on Vectra
+    2025-06-09 19:42:10|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1202> Found 0 blocked accounts that are now part of the no-block lists
+    2025-06-09 19:42:10|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1220> Found 0 accounts that need to be blocked
+    2025-06-09 19:42:10|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_accounts_to_block_unblock:1243> Found 0 accounts that need to be unblocked
+    2025-06-09 19:42:13|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1270> Found 0 already blocked detections on Vectra
+    2025-06-09 19:42:13|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1284> Found 0 blocked detections that are now part of the no-block lists
+    2025-06-09 19:42:13|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1302> Found 0 detections that need to be blocked
+    2025-06-09 19:42:13|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_detections_to_block_unblock:1325> Found 0 detections that need to be unblocked
+    2025-06-09 19:42:13|DEBUG   :Process-1:MainThread|VAR_Client:vectra_automated_response:get_static_dst_ips_to_block_unblock:1384> Found 0 static IPs to block, 0 to unblock
+    2025-06-09 19:42:13|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2107> No actions taken.
+    2025-06-09 19:42:13|INFO    :Process-1:MainThread|VAR_Client:vectra_automated_response:take_action:2108> Run finished.
+kind: ConfigMap
+metadata:
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: logs

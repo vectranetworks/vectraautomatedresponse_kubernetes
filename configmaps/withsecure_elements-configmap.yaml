@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  elements_config.py: |
+    BASE_URL = "https://api.connect.withsecure.com"
+    CHECK_SSL = False
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: withsecure-elements

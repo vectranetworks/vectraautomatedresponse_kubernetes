@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  bitdefender_config.py: |
+    HOSTNAME = ""
+    CHECK_SSL = False
+    BLOCK_MULTIPLE = False
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: bitdefender

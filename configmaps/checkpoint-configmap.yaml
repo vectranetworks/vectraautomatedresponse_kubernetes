@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  checkpoint_config.py: |
+    USER = "admin"
+    HOST = "1.1.1.1"
+    PORT = 443
+    INTERNAL_ADDRESS_GROUP = "Internal-Block"
+    EXTERNAL_ADDRESS_GROUP = "External-Block"
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: checkpoint

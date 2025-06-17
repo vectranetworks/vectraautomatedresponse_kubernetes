@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  mcafee_config.py: |
+    HOSTNAME = ""
+    PORT = ""
+    TAGID = ""
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: mcafee

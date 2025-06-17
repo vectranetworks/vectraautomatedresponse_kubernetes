@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  vmware_config.py: |
+    HOSTS = [""]
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: vmware

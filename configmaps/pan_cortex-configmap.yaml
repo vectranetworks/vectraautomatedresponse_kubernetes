@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  cortex_config.py: |
+    CORTEX_URL = ""
+    # standard or advanced
+    CORTEX_API_TYPE = "standard"
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: pan-cortex

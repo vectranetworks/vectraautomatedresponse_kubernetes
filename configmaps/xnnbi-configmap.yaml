@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  xnnbi_config.py: |
+    HOSTNAME = ""
+    PORT = 8443
+    CHECK_SSL = False
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: xnnbi

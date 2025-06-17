@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  test_client_config.py: |
+    URL = "https://example.com/api/data"
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: test-client

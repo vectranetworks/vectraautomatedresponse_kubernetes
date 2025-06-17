@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  cloudone_config.py: |
+    BASE_URL = "https://workload.<region>.cloudone.trendmicro.com"
+    CHECK_SSL = False
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: trendmicro-cloud-one

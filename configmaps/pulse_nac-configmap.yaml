@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  pulse_nac_config.py: |
+    # Pulse NAC appliance IP or hostname
+    PULSE_APPLIANCE = ""
+    CHECK_SSL = False
+    # User's private RSA keyfile used in token encoding
+    RSA_FILE = ""
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: pulse-nac

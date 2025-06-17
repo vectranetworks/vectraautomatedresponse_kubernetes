@@ -1,0 +1,422 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.34.0 (cbf2835db)
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: vectra-automated-response
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: vectra-automated-response
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.34.0 (cbf2835db)
+      labels:
+        io.kompose.service: vectra-automated-response
+    spec:
+      containers:
+        - env:
+            - name: VAR_DEBUG
+              value: "False"
+            - name: <Brain URL>_Client_ID
+              value: <Client ID>
+            - name: <Brain URL>_Secret_Key
+              value: <Secret Key>
+            # Examples
+            # - name: https://130220373595.uw2.portal.vectra.ai_Client_ID
+            #   value: 22a6e038ef6b009f9b6f773fdba454b0
+            # - name: https://130220373595.uw2.portal.vectra.ai_Secret_Key
+            #   value: WFFGTk1CRkNSNFhPKIJQVkY1QjJFU0RCVVlHWUJVSEY1TDVWUFdLTEhFRU1STEk2RlJIQUU_Z2wkazJeOFA4Qj8yb0c
+
+            # Integrations
+            # - name: ApexOne_Application_ID
+            #   value: <ApexOne Application ID>
+            # - name: ApexOne_API_Key
+            #   value: <ApexOne API Key>
+            # - name: Bitdefender_API_Key
+            #   value: <Bitdefender API Key>
+            # - name: Cisco_Amp_Client_ID
+            #   value: <Cisco AMP Client ID>
+            # - name: Cisco_Amp_API_Key
+            #   value: <Cisco AMP API Key>
+            # - name: Cisco_ASA_HTTP_Username
+            #   value: <Cisco ASA HTTP Username>
+            # - name: Cisco_ASA_HTTP_Password
+            #   value: <Cisco ASA HTTP Password>
+            # - name: Cisco_FMC_Username
+            #   value: <Cisco FMC Username>
+            # - name: Cisco_FMC_Password
+            #   value: <Cisco FMC Password>
+            # - name: Cisco_ISE_Username
+            #   value: <Cisco ISE Username>
+            # - name: Cisco_ISE_Password
+            #   value: <Cisco ISE Password>
+            # - name: Cisco_PxGrid_Username
+            #   value: <Cisco PxGrid Username>
+            # - name: Cisco_PxGrid_Password
+            #   value: <Cisco PxGrid Password>
+            # - name: Cisco_PxGrid_Priv_Key_Pass
+            #   value: <Cisco PxGrid Priv Key Password>
+            # - name: CheckPoint_<Checkpoint Username>
+            #   value: <Checkpoint User Password>
+            # - name: Clearpass_Client_ID
+            #   value: <Clearpass Client ID>
+            # - name: Clearpass_Client_Secret
+            #   value: <Clearpass Client Secret>
+            # - name: Clearpass_Username
+            #   value: <Clearpass Username>
+            # - name: Clearpass_Password
+            #   value: <Clearpass Password>
+            # - name: CloudOne_API_Key
+            #   value: <CloudOne API Key>
+            # - name: Cortex_API_Token
+            #   value: <Cortex API Token>
+            # - name: Cortex_Key_ID
+            #   value: <Cortex Key ID>
+            # - name: Elements_Client_ID
+            #   value: <Elements Client ID>
+            # - name: Elements_API_Key
+            #   value: <Elements API Key>
+            # - name: Elements_Org_UUID
+            #   value: <Elements Org UUID>
+            # - name: Endgame_API_Token
+            #   value: <Harmony API Token>
+            # - name: FortiEDR_user
+            #   value: <FortiEDR Username>
+            # - name: FortiEDR_password
+            #   value: <FortiEDR Password>
+            # # If more than one Fortinet Firewall: add multiples of the below as necessary
+            # - name: Fortinet_<Firewall_IP> 
+            #   value: <Fortinet API Token for given Firewall IP>
+            # - name: Harmony_API_Key
+            #   value: <Harmony API Key>
+            # - name: McAfee_Username
+            #   value: <McAfee Username>
+            # - name: McAfee_Password
+            #   value: <McAfee Password>
+            # - name: Meraki_API_Key
+            #   value: <Meraki API Key>
+            # # If more than one Pan Device: add multiples of the below as necessary
+            # - name: <PAN_URL>_API_Key
+            #   value: <API Key for given PAN device>
+            # - name: <PAN_URL>_username
+            #   value: <Username for given PAN device>
+            # - name: <PAN_URL>_password
+            #   value: <User Password for given PAN device>
+            # - name: Pulse_Username
+            #   value: <Pulse Username>
+            # - name: Pulse_Password
+            #   value: <Pulse Password>
+            # - name: Sophos_Username
+            #   value: <Sophos Username>
+            # - name: Sophos_Password
+            #   value: <Sophos Password>
+            # - name: SophosEDR_client_id
+            #   value: <Sophos EDR Client ID>
+            # - name: SophosEDR_client_secret
+            #   value: <Sophos EDR Client Secret>
+            # - name: Tanium_Token
+            #   value: <Tanium token>
+            # - name: VisionOne_API_Key
+            #   value: <VisionOne API Key>
+            # - name: WatchGuard_Account_ID
+            #   value: <WatchGuard Account ID>
+            # - name: WatchGuard_Password
+            #   value: <WatchGuard Password>
+            # - name: WatchGuard_Access_ID
+            #   value: <WatchGuard Access ID>
+            # - name: XNNBI_Client_ID
+            #   value: <XNNBI Client ID>
+            # - name: XNNBI_Client_Secret
+            #   value: <XNNBI Client Secret>
+          image: vectra-automated-response:latest
+          name: vectra-automated-response
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          volumeMounts:
+            - mountPath: /app/vectraautomatedresponse/config.py
+              name: config
+              subPath: config.py
+            - mountPath: /app/third_party_clients/bitdefender/bitdefender_config.py
+              name: bitdefender
+              subPath: bitdefender_config.py
+            - mountPath: /app/third_party_clients/checkpoint/checkpoint_config.py
+              name: checkpoint
+              subPath: checkpoint_config.py
+            - mountPath: /app/third_party_clients/cisco_amp/amp_config.py
+              name: cisco-amp
+              subPath: amp_config.py
+            - mountPath: /app/third_party_clients/cisco_asa_http/asa_http_config.py
+              name: cisco-asa
+              subPath: asa_http_config.py
+            - mountPath: /app/third_party_clients/cisco_fmc/fmc_config.py
+              name: cisco-fmc
+              subPath: fmc_config.py
+            - mountPath: /app/third_party_clients/cisco_ise/ise_config.py
+              name: cisco-ise
+              subPath: ise_config.py
+            - mountPath: /app/third_party_clients/cisco_pxgrid/pxgrid_config.py
+              name: cisco-pxgrid
+              subPath: pxgrid_config.py
+            - mountPath: /app/third_party_clients/clearpass/clearpass_config.py
+              name: clearpass
+              subPath: clearpass_config.py
+            - mountPath: /app/third_party_clients/endgame/endgame_config.py
+              name: endgame
+              subPath: endgame_config.py
+            - mountPath: /app/third_party_clients/external_call/external_call_config.py
+              name: external-call
+              subPath: external_call_config.py
+            - mountPath: /app/third_party_clients/forti_edr/forti_edr_config.py
+              name: forti-edr
+              subPath: forti_edr_config.py
+            - mountPath: /app/third_party_clients/fortinet/fortinet_config.py
+              name: fortinet
+              subPath: fortinet_config.py
+            - mountPath: /app/third_party_clients/harmony/harmony_config.py
+              name: harmony
+              subPath: harmony_config.py
+            - mountPath: /app/third_party_clients/mcafee_epo/mcafee_config.py
+              name: mcafee
+              subPath: mcafee_config.py
+            - mountPath: /app/third_party_clients/meraki/meraki_config.py
+              name: meraki
+              subPath: meraki_config.py
+            - mountPath: /app/third_party_clients/pan/pan_config.py
+              name: pan
+              subPath: pan_config.py
+            - mountPath: /app/third_party_clients/pan_cortex/cortex_config.py
+              name: pan-cortex
+              subPath: cortex_config.py
+            - mountPath: /app/third_party_clients/pulse_nac/pulse_nac_config.py
+              name: pulse-nac
+              subPath: pulse_nac_config.py
+            - mountPath: /app/third_party_clients/sophos/sophos_config.py
+              name: sophos
+              subPath: sophos_config.py
+            - mountPath: /app/third_party_clients/sophos_edr/sophos_edr_config.py
+              name: sophos-edr
+              subPath: sophos_edr_config.py
+            - mountPath: /app/third_party_clients/tanium/tanium_config.py
+              name: tanium
+              subPath: tanium_config.py
+            - mountPath: /app/third_party_clients/test_client/test_client_config.py
+              name: test-client
+              subPath: test_client_config.py
+            - mountPath: /app/third_party_clients/trendmicro_apexone/apex_one_config.py
+              name: trendmicro-apex-one
+              subPath: apex_one_config.py
+            - mountPath: /app/third_party_clients/trendmicro_cloudone/cloudone_config.py
+              name: trendmicro-cloud-one
+              subPath: cloudone_config.py
+            - mountPath: /app/third_party_clients/trendmicro_visionone/vision_one_config.py
+              name: trendmicro-vision-one
+              subPath: vision_one_config.py
+            - mountPath: /app/third_party_clients/vmware/vmware_config.py
+              name: vmware
+              subPath: vmware_config.py
+            - mountPath: /app/third_party_clients/watchguard/watchguard_config.py
+              name: watchguard
+              subPath: watchguard_config.py
+            - mountPath: /app/third_party_clients/withsecure_elements/elements_config.py
+              name: withsecure-elements
+              subPath: elements_config.py
+            - mountPath: /app/third_party_clients/xtreme_networks_nbi/xnnbi_config.py
+              name: xnnbi
+              subPath: xnnbi_config.py
+      restartPolicy: Always
+      volumes:
+        - configMap:
+            items:
+              - key: config.py
+                path: config.py
+            name: config
+          name: config
+        - configMap:
+            items:
+              - key: bitdefender_config.py
+                path: bitdefender_config.py
+            name: bitdefender
+          name: bitdefender
+        - configMap:
+            items:
+              - key: checkpoint_config.py
+                path: checkpoint_config.py
+            name: checkpoint
+          name: checkpoint
+        - configMap:
+            items:
+              - key: amp_config.py
+                path: amp_config.py
+            name: cisco-amp
+          name: cisco-amp
+        - configMap:
+            items:
+              - key: asa_http_config.py
+                path: asa_http_config.py
+            name: cisco-asa
+          name: cisco-asa
+        - configMap:
+            items:
+              - key: fmc_config.py
+                path: fmc_config.py
+            name: cisco-fmc
+          name: cisco-fmc
+        - configMap:
+            items:
+              - key: ise_config.py
+                path: ise_config.py
+            name: cisco-ise
+          name: cisco-ise
+        - configMap:
+            items:
+              - key: pxgrid_config.py
+                path: pxgrid_config.py
+            name: cisco-pxgrid
+          name: cisco-pxgrid
+        - configMap:
+            items:
+              - key: clearpass_config.py
+                path: clearpass_config.py
+            name: clearpass
+          name: clearpass
+        - configMap:
+            items:
+              - key: endgame_config.py
+                path: endgame_config.py
+            name: endgame
+          name: endgame
+        - configMap:
+            items:
+              - key: external_call_config.py
+                path: external_call_config.py
+            name: external-call
+          name: external-call
+        - configMap:
+            items:
+              - key: forti_edr_config.py
+                path: forti_edr_config.py
+            name: forti-edr
+          name: forti-edr
+        - configMap:
+            items:
+              - key: fortinet_config.py
+                path: fortinet_config.py
+            name: fortinet
+          name: fortinet
+        - configMap:
+            items:
+              - key: harmony_config.py
+                path: harmony_config.py
+            name: harmony
+          name: harmony
+        - configMap:
+            items:
+              - key: mcafee_config.py
+                path: mcafee_config.py
+            name: mcafee
+          name: mcafee
+        - configMap:
+            items:
+              - key: meraki_config.py
+                path: meraki_config.py
+            name: meraki
+          name: meraki
+        - configMap:
+            items:
+              - key: pan_config.py
+                path: pan_config.py
+            name: pan
+          name: pan
+        - configMap:
+            items:
+              - key: cortex_config.py
+                path: cortex_config.py
+            name: pan-cortex
+          name: pan-cortex
+        - configMap:
+            items:
+              - key: pulse_nac_config.py
+                path: pulse_nac_config.py
+            name: pulse-nac
+          name: pulse-nac
+        - configMap:
+            items:
+              - key: sophos_config.py
+                path: sophos_config.py
+            name: sophos
+          name: sophos
+        - configMap:
+            items:
+              - key: sophos_edr_config.py
+                path: sophos_edr_config.py
+            name: sophos-edr
+          name: sophos-edr
+        - configMap:
+            items:
+              - key: tanium_config.py
+                path: tanium_config.py
+            name: tanium
+          name: tanium
+        - configMap:
+            items:
+              - key: test_client_config.py
+                path: test_client_config.py
+            name: test-client
+          name: test-client
+        - configMap:
+            items:
+              - key: apex_one_config.py
+                path: apex_one_config.py
+            name: trendmicro-apex-one
+          name: trendmicro-apex-one
+        - configMap:
+            items:
+              - key: cloudone_config.py
+                path: cloudone_config.py
+            name: trendmicro-cloud-one
+          name: trendmicro-cloud-one
+        - configMap:
+            items:
+              - key: vision_one_config.py
+                path: vision_one_config.py
+            name: trendmicro-vision-one
+          name: trendmicro-vision-one
+        - configMap:
+            items:
+              - key: vmware_config.py
+                path: vmware_config.py
+            name: vmware
+          name: vmware
+        - configMap:
+            items:
+              - key: watchguard_config.py
+                path: watchguard_config.py
+            name: watchguard
+          name: watchguard
+        - configMap:
+            items:
+              - key: elements_config.py
+                path: elements_config.py
+            name: withsecure-elements
+          name: withsecure-elements
+        - configMap:
+            items:
+              - key: xnnbi_config.py
+                path: xnnbi_config.py
+            name: xnnbi
+          name: xnnbi
+

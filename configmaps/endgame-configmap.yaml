@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  endgame_config.py: |
+    # Connection information
+    URL = ""
+    CHECK_SSL = False
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: endgame

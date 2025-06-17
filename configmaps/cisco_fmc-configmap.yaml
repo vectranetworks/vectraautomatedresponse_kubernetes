@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  fmc_config.py: |
+    URL = ""
+    BLOCK_GROUP = ""
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: cisco-fmc

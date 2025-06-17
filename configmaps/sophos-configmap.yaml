@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  sophos_config.py: |
+    HOSTNAME = ""
+    PORT = 4444
+    IS_ENCRYPTED = True
+    BLOCK_LIST_NAME = "Vectra - Sophos Integration"
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: sophos

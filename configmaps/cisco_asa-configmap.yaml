@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  asa_http_config.py: |
+    URL = ""
+    BLOCK_GROUP = ""
+    USER_AGENT = ""
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: cisco-asa

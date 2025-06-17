@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  external_call_config.py: |
+    HOST_BLOCK_CMD = []
+    HOST_UNBLOCK_CMD = []
+    ACCOUNT_BLOCK_CMD = []
+    ACCOUNT_UNBLOCK_CMD = []
+    DETECTION_BLOCK_CMD = []
+    DETECTION_UNBLOCK_CMD = []
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: external-call

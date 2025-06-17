@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  apex_one_config.py: |
+    # Connection information
+    BASE_URL = "https://<update>.manage.trendmicro.com"
+    # API Path - shouldn't need to change
+    API_PATH = "/WebApp/API/AgentResource/ProductAgents"
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: trendmicro-apex-one

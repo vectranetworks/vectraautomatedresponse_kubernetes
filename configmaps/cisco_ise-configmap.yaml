@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  ise_config.py: |
+    ISE_APPLIANCE_IP = ""
+    CHECK_SSL = False
+    # We need first to put the endpoint in a temporary policy to make the port bounce
+    PORTBOUNCE_POLICY = "PortBounce"
+    QUARANTAINE_POLICY = "Quarantine"
+    ENHANCED = False
+kind: ConfigMap
+metadata:
+  annotations:
+    use-subpath: "true"
+  labels:
+    io.kompose.service: vectra-automated-response
+  name: cisco-ise
